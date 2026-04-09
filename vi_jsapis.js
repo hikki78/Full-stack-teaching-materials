@@ -72,3 +72,32 @@ const strFloat = "3.14";
 const floatNum = parseFloat(strFloat);
 console.log("The floating-point value is : ", floatNum); // Output: 3.14
 
+//Array methods
+const initialArray = [1, 2, 3, 4, 5];
+initialArray.push(6); // The push method adds a new element to the end of the array. In this case, it adds the number 6 to the end of the initialArray. After this operation, initialArray will be [1, 2, 3, 4, 5, 6].
+console.log(initialArray); // Output: [1, 2, 3, 4, 5, 6]
+
+const removedElement = initialArray.pop(); // The pop method removes the last element from the array and returns that element. In this case, it removes the number 6 from the end of the initialArray and assigns it to the variable removedElement. After this operation, initialArray will be back to [1, 2, 3, 4, 5], and removedElement will be 6.
+console.log(initialArray); // Output: [1, 2, 3, 4, 5]
+console.log("Removed element is : ", removedElement); // Output: "Removed element is : 6"   
+
+initialArray.unshift(0); // The unshift method adds a new element to the beginning of the array. In this case, it adds the number 0 to the start of the initialArray. After this operation, initialArray will be [0, 1, 2, 3, 4, 5].
+console.log(initialArray); // Output: [0, 1, 2, 3, 4, 5]
+
+const removedFirstElement = initialArray.shift(); // The shift method removes the first element from the array and returns that element. In this case, it removes the number 0 from the start of the initialArray and assigns it to the variable removedFirstElement. After this operation, initialArray will be back to [1, 2, 3, 4, 5], and removedFirstElement will be 0.
+console.log(initialArray); // Output: [1, 2, 3, 4, 5]
+console.log("Removed first element is : ", removedFirstElement); // Output: "Removed first element is : 0"
+
+//concat
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const combinedArray = array1.concat(array2); // The concat method is used to merge two or more arrays. In this case, it merges array1 and array2 into a new array called combinedArray. After this operation, combinedArray will be [1, 2, 3, 4, 5, 6], while array1 and array2 will remain unchanged.
+console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+//forEach
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(number) {
+    console.log(number);
+}); // The forEach method executes a provided function once for each array element.
+
+
