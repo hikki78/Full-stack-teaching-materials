@@ -85,3 +85,6 @@ And this is why we use functions for specific tasks that can be performed in a s
 In this case, the sum function is more appropriate for adding two numbers together, while the sumLoop function is designed to calculate the sum of a range of numbers, which is why it behaves differently when given the same inputs.*/ 
 
 // we will learn more about functions in next part.
+
+
+

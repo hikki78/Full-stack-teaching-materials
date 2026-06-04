@@ -100,4 +100,52 @@ numbers.forEach(function(number) {
     console.log(number);
 }); // The forEach method executes a provided function once for each array element.
 
+//class and object:
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+const person1 = new Person("Alice", 30);//this is object instantiation.
+person1.greet(); // Output: "Hello, my name is Alice and I am 30 years old."
+
+//static function:
+class MathUtils {
+    static add(a, b) {
+        return a + b;
+    }
+}
+const sum = MathUtils.add(5, 10); // The add method is called directly on the MathUtils class without creating an instance of the class. This is because add is a static method.
+console.log("The sum is : ", sum); // Output: "The sum is : 15"
+
+//dateclass in JavaScript:
+const currentDate = new Date(); // The Date class in JavaScript is used to work with dates and times. The new Date() constructor creates a new Date object representing the current date and time.
+console.log("Current date and time is : ", currentDate); // Output: Current date and time is :  [current date and time]
+
+//setInterval: The setInterval function in JavaScript is used to execute a specified function repeatedly at fixed time intervals. It takes two arguments: the first is the function to be executed, and the second is the time interval in milliseconds. The setInterval function returns an interval ID that can be used to clear the interval later using clearInterval. In the example provided, it will log "This message will be logged every 2 seconds" to the console every 2 seconds until the interval is cleared.
+const intervalId = setInterval(function() {
+    console.log("This message will be logged every 2 seconds");
+}, 2000);
+// To stop the interval after some time, you can use clearInterval with the interval ID.
+// For example, to stop it after 10 seconds:
+setTimeout(function() {
+    clearInterval(intervalId);
+    console.log("Interval cleared, no more messages will be logged.");
+}, 10000);
+
+
+//JSON:
+const jsonString = '{"name": "Alice", "age": 30}'; // JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. The jsonString variable contains a JSON string representing an object with two properties: name and age.
+const jsonObject = JSON.parse(jsonString); // The JSON.parse() method is used to parse a JSON string and convert it into a JavaScript object. In this case, it takes the jsonString and converts it into a JavaScript object assigned to the variable jsonObject.
+console.log("Parsed JSON object is : ", jsonObject); // Output: "Parsed JSON object is :  { name: 'Alice', age: 30 }"
+//JSON makes it a string format and we can easily send it to the server and also we can easily parse it back to the object. It is widely used in web development for data exchange between client and server.
+//just like parse there is also a stringify method in JSON which converts a JavaScript object into a JSON string.
+const jsObject = { name: "Bob", age: 25 };
+const jsonStringified = JSON.stringify(jsObject); // The JSON.stringify() method is used to convert a JavaScript object into a JSON string. In this case, it takes the jsObject and converts it into a JSON string assigned to the variable jsonStringified.
+console.log("Stringified JSON is : ", jsonStringified); // Output: "Stringified JSON is :  {"name":"Bob","age":25}"
+
 
